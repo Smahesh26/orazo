@@ -1,0 +1,155 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 0 0% 86%; /* #DCDCDC */
+
+    --card: 0 0% 0%; /* #000000 */
+    --card-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --popover: 0 0% 0%; /* #000000 */
+    --popover-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --primary: 66 100% 27%; /* #778900 */
+    --primary-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --secondary: 86 3% 68%; /* #ADAFAA */
+    --secondary-foreground: 0 0% 0%; /* #000000 */
+
+    --muted: 86 3% 68%; /* #ADAFAA */
+    --muted-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --accent: 66 100% 27%; /* #778900 */
+    --accent-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --border: 86 3% 68%; /* #ADAFAA */
+    --input: 86 3% 68%; /* #ADAFAA */
+    --ring: 66 100% 27%; /* #778900 */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 0%; /* #000000 */
+    --sidebar-foreground: 0 0% 86%; /* #DCDCDC */
+    --sidebar-primary: 66 100% 27%; /* #778900 */
+    --sidebar-primary-foreground: 0 0% 86%; /* #DCDCDC */
+    --sidebar-accent: 86 3% 68%; /* #ADAFAA */
+    --sidebar-accent-foreground: 0 0% 0%; /* #000000 */
+    --sidebar-border: 86 3% 68%; /* #ADAFAA */
+    --sidebar-ring: 66 100% 27%; /* #778900 */
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 0 0% 86%; /* #DCDCDC */
+
+    --card: 0 0% 0%; /* #000000 */
+    --card-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --popover: 0 0% 0%; /* #000000 */
+    --popover-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --primary: 66 100% 27%; /* #778900 */
+    --primary-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --secondary: 120 1% 51%; /* #818382 */
+    --secondary-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --muted: 120 1% 51%; /* #818382 */
+    --muted-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --accent: 66 100% 27%; /* #778900 */
+    --accent-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 86%; /* #DCDCDC */
+
+    --border: 120 1% 51%; /* #818382 */
+    --input: 120 1% 51%; /* #818382 */
+    --ring: 66 100% 27%; /* #778900 */
+    --sidebar-background: 0 0% 0%; /* #000000 */
+    --sidebar-foreground: 0 0% 86%; /* #DCDCDC */
+    --sidebar-primary: 66 100% 27%; /* #778900 */
+    --sidebar-primary-foreground: 0 0% 86%; /* #DCDCDC */
+    --sidebar-accent: 120 1% 51%; /* #818382 */
+    --sidebar-accent-foreground: 0 0% 86%; /* #DCDCDC */
+    --sidebar-border: 120 1% 51%; /* #818382 */
+    --sidebar-ring: 66 100% 27%; /* #778900 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 3D Glossy Effects */
+@layer utilities {
+  .glass-effect {
+    backdrop-filter: blur(16px);
+    background: rgba(119, 137, 0, 0.1);
+    border: 1px solid rgba(119, 137, 0, 0.2);
+    box-shadow: 
+      0 8px 32px rgba(119, 137, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, 
+      rgba(220, 220, 220, 0.1) 0%, 
+      rgba(173, 175, 170, 0.05) 50%, 
+      rgba(129, 131, 130, 0.1) 100%);
+    border: 1px solid rgba(220, 220, 220, 0.1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .header-glass {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, 
+      rgba(119, 137, 0, 0.95) 0%, 
+      rgba(119, 137, 0, 0.9) 50%, 
+      rgba(119, 137, 0, 0.95) 100%);
+    border-bottom: 1px solid rgba(220, 220, 220, 0.1);
+    box-shadow: 
+      0 4px 24px rgba(119, 137, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .glossy-button {
+    background: linear-gradient(135deg, 
+      rgba(119, 137, 0, 1) 0%, 
+      rgba(119, 137, 0, 0.9) 50%, 
+      rgba(119, 137, 0, 1) 100%);
+    border: 1px solid rgba(220, 220, 220, 0.2);
+    box-shadow: 
+      0 4px 16px rgba(119, 137, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .glossy-button:hover {
+    box-shadow: 
+      0 6px 20px rgba(119, 137, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
