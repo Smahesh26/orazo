@@ -123,9 +123,9 @@
   .header-glass {
     backdrop-filter: blur(20px);
     background: linear-gradient(135deg, 
-      rgba(119, 137, 0, 0.95) 0%, 
-      rgba(119, 137, 0, 0.9) 50%, 
-      rgba(119, 137, 0, 0.95) 100%);
+rgb(119 185 0/var(--tw-bg-opacity,1)) 0%,
+     rgb(119 185 0/var(--tw-bg-opacity,1)) 50%, 
+      rgb(119 185 0/var(--tw-bg-opacity,1)) 100%);
     border-bottom: 1px solid rgba(220, 220, 220, 0.1);
     box-shadow: 
       0 4px 24px rgba(119, 137, 0, 0.3),
@@ -134,9 +134,9 @@
   
   .glossy-button {
     background: linear-gradient(135deg, 
-      rgba(119, 137, 0, 1) 0%, 
-      rgba(119, 137, 0, 0.9) 50%, 
-      rgba(119, 137, 0, 1) 100%);
+    rgb(119 185 0/var(--tw-bg-opacity,1)) 0%, 
+  rgb(119 185 0/var(--tw-bg-opacity,1))50%, 
+    rgb(119 185 0/var(--tw-bg-opacity,1)) 100%);
     border: 1px solid rgba(220, 220, 220, 0.2);
     box-shadow: 
       0 4px 16px rgba(119, 137, 0, 0.3),
